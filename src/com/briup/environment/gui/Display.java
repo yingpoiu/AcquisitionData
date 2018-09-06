@@ -28,16 +28,16 @@ import com.briup.environment.util.Configuration;
 
 public class Display {
 	private static String driverString="oracle.jdbc.driver.OracleDriver";
-	 private static String dbURL = "jdbc:oracle:thin:@127.0.0.1:1521:XE";	// 连接字符串
+	 private static String dbURL = "jdbc:oracle:thin:@127.0.0.1:1521:XE";	// 锟斤拷锟斤拷锟街凤拷锟斤拷
 	 private static String userName = "envir";	
 	 private static String userPwd = "envir";
 	 private Configuration configuration;
 
 	public static void main(String[] args) throws Exception {
-		final JFrame frame =  new JFrame("物联网数据中心");
+		final JFrame frame =  new JFrame("淇℃伅灞曠ず");
         frame.setDefaultCloseOperation(3);
 		final DefaultTableModel model=new DefaultTableModel();
-		model.setColumnIdentifiers(new Object[]{"环境名称","发送端id ","树莓派id","传感器地址","传感器个数","指令标号","状态标示","环境值","采集时间"});
+		model.setColumnIdentifiers(new Object[]{"鏃ユ湡","浼犳劅鍣╥d ","锟斤拷莓锟斤拷id","锟斤拷锟斤拷锟斤拷锟斤拷址","锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷","指锟斤拷锟斤拷","状态锟斤拷示","锟斤拷锟斤拷值","锟缴硷拷时锟斤拷"});
 		
 				Class.forName(driverString);
 				Connection dbConn = DriverManager.getConnection(dbURL, userName, userPwd);
@@ -72,18 +72,18 @@ public class Display {
 		        final TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(model);
                  table.setRowSorter(sorter);
 		         JPanel panel = new JPanel(new FlowLayout());
-		         Label label =  new Label("物联网数据控制中心");
+		         Label label =  new Label("锟斤拷锟斤拷锟斤拷锟斤拷锟捷匡拷锟斤拷锟斤拷锟斤拷");
 		         panel.add(label);
 		         JPanel panel2=new JPanel();
 		         final JTextField filterText = new JTextField(5);
-		         panel2.add(new Label("按日期查询"));
+		         panel2.add(new Label("锟斤拷锟斤拷锟节诧拷询"));
 		         panel2.add(filterText, BorderLayout.CENTER);
 		         frame.add(panel, BorderLayout.NORTH);
 		         frame.add(panel2,BorderLayout.WEST);
 		        
-		         JButton button =  new JButton("查询");
+		         JButton button =  new JButton("锟斤拷询");
 		         frame.add(button, BorderLayout.SOUTH);
-		         button.addActionListener(new ActionListener() {//实现查询事件
+		         button.addActionListener(new ActionListener() {//实锟街诧拷询锟铰硷拷
 		 			@Override
 		 			public void actionPerformed(ActionEvent e) {
 		 				
